@@ -1,0 +1,54 @@
+  <button id="burger-menu" aria-label="Menyuni ochish">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://img.freepik.com/vector-premium/icono-chip-inteligencia-artificial-o-ia-blanco-negro-vector-circuito_1008589-54.jpg">
+</head>
+<body>
+  <!-- Burger menyu tugmasi (faqat mobil uchun) -->
+  <button id="burger-menu" aria-label="Menyuni ochish" style="display:none">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="7" width="32" height="3.5" rx="1.5" fill="#fff"/>
+      <rect y="14" width="32" height="3.5" rx="1.5" fill="#fff"/>
+      <rect y="21" width="32" height="3.5" rx="1.5" fill="#fff"/>
+    </svg>
+  </button>
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Tarix</h2>
+        <button id="new-chat" title="Yangi chat">＋</button>
+      </div>
+      <ul id="history-list"></ul>
+      <div class="sidebar-actions">
+        <button id="sidebar-export">⬇️ Eksport</button>
+        <button id="sidebar-import">⬆️ Import</button>
+        <input type="file" id="sidebar-import-file" accept="application/json" style="display:none">
+      </div>
+      <div class="sidebar-user">
+        <input type="text" id="sidebar-username" maxlength="18" placeholder="Ismingiz...">
+        <button id="sidebar-save-username" title="Saqlash">💾</button>
+      </div>
+    </aside>
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+      <header>
+        <img src="https://img.freepik.com/vector-premium/icono-chip-inteligencia-artificial-o-ia-blanco-negro-vector-circuito_1008589-54.jpg" alt="Anime AI" class="avatar">
+        <h1>Anime AI Chatbot</h1>
+        <p class="subtitle">Anime bo'yicha do'stona yordamchi</p>
+      </header>
+      <main id="chat-area"></main>
+      <form id="chat-form" autocomplete="off">
+        <input type="text" id="user-input" placeholder="Xabar yozing..." maxlength="200" autofocus required>
+        <button type="submit" aria-label="Yuborish">➤</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
